@@ -1,9 +1,9 @@
 async function buscarFilmes() {
 
-    const resposta = await fetch("https://crudfilmes-6cbnosdfk-kalebes-projects-1a5fd7c2.vercel.app/")
+    const resposta = await fetch("https://crudfilmes-6cbnosdfk-kalebes-projects-1a5fd7c2.vercel.app/all-movies")
     const filmes = await resposta.json()
 
-    const lista = document.getElementById(".filmes")
+    const lista = document.querySelector(".filmes")
     lista.innerHTML = ""
 
     filmes.forEach((filme) => {
